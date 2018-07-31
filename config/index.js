@@ -1,3 +1,5 @@
+'use strict';
+
 const cfg = require(`./config.${process.env.NODE_ENV || 'dev'}`);
 const defaultCfg = require('./config.default');
 const _ = require('lodash');

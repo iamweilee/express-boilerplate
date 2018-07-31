@@ -1,3 +1,5 @@
+'use strict';
+
 exports.app = {
 	port: 8000,
 	siteName: '期乎',

@@ -1,3 +1,5 @@
+'use strict';
+
 const _ = require('lodash');
 const fileHelper = require('./file');
 // maxLogSize是以byte为单位计算的
@@ -61,7 +63,7 @@ function getLogsDir() {
       // Avoids an infinite loop in rare cases, like the REPL
       dir = process.cwd();
     }
-    var arr = dir.split(path.sep);
+    let arr = dir.split(path.sep);
     if (arr && arr[arr.length - 1] === 'node_modules') {
       dir = path.join(dir, '..');
       return dir;

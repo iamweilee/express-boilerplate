@@ -1,3 +1,5 @@
+'use strict';
+
 exports.logger = {
 	level: {
     access: 'ERROR',

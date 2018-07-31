@@ -1,8 +1,10 @@
+'use strict';
+
 const Sequelize = require('sequelize');
 const cfg = require('./config').db;
 const logger = require('./utils/logger').getLogger('db');
 
-var sequelize = new Sequelize(
+const sequelize = new Sequelize(
     cfg.database,   // 数据库名
     cfg.username,   // 用户名
     cfg.password,   // 用户密码

@@ -1,3 +1,5 @@
+'use strict';
+
 const logger = require('./logger').getLogger('service');
 
 module.exports = (Model) => {
