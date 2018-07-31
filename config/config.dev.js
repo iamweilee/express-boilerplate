@@ -10,5 +10,5 @@ exports.logger = {
 };
 
 exports.app = {
-	siteName: '期乎 | dev'
+	siteName: '自定义网站名 | dev'
 };
