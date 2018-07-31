@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name="renderer", content="webkit")
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-sacle=1.0, user-scalable=no')
+    meta(name='description', content=`${app.description}`)
+    meta(name='keywords', content=`${app.keywords}`)
+    title #{title} - #{app.siteName}
+    link(rel='stylesheet', href='/css/common.css')
+    block css_layout_head
+    block js_layout_head
+  body
+    block content_layout_body
+    block js_layout_body

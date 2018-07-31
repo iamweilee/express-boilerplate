@@ -1,0 +1,28 @@
+{
+  "name": "express-boilerplate",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "dev": "node ./bin/www",
+    "prod": "cross-env NODE_ENV=prod node ./bin/www",
+    "start": "cross-env NODE_ENV=prod node ./bin/www",
+    "test-dev": "node ./tests/index",
+    "test-prod": "cross-env NODE_ENV=prod node ./tests/index",
+    "test": "cross-env NODE_ENV=prod node ./tests/index"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "http-errors": "~1.6.2",
+    "lodash": "^4.17.10",
+    "log4js": "^3.0.3",
+    "moment": "^2.22.2",
+    "mysql2": "^1.5.3",
+    "pug": "^2.0.3",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}

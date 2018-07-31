@@ -1,0 +1,17 @@
+extends layout
+
+block js_layout_head
+  script(src='/js/error/e.js')
+
+block content_layout_body
+  h1= message
+  h2= error.status
+  -
+  case app.env
+    when 'dev'
+      pre #{error.stack}
+    when 'prod'
+      div
+        span#time
+        span 秒后跳转到
+        a#link(href='javascript:;') 首页
