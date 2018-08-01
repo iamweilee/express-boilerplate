@@ -1,6 +1,6 @@
 'use strict';
 
-const exampleService = require('../services/example');
+const exampleService = require('./service');
 
 exports.list = async (req, res, next) => {
   let list = await exampleService.instance.findAll();
