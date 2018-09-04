@@ -8,8 +8,10 @@ html
     meta(name='description', content=`${app.description}`)
     meta(name='keywords', content=`${app.keywords}`)
     title #{title} - #{app.siteName}
-    link(rel='stylesheet', href='/modules/common/css/reset.css')
+    link(rel='stylesheet', href='/biz/common/css/reset.css')
     block css_layout_head
+    script(src="/plugins/jqmvvm/lib/jquery-2.2.0.min.js")
+    script(src="/plugins/jqmvvm/jqmvvm.js")
     block js_layout_head
   body
     block content_layout_body

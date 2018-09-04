@@ -25,12 +25,12 @@ exports.db = {
   //   autocommit: true
   // },
   pool: {
-      max: 10,
-      min: 0,
-      // idle: 10000,
-      // acquire: 20000,
-      // evict: 20000,
-      // autostart: true
+    max: 10,
+    min: 0,
+    // idle: 10000,
+    // acquire: 20000,
+    // evict: 20000,
+    // autostart: true
   }
 };
 

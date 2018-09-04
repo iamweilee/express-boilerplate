@@ -2,8 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-const exampleController = require('./controller');
-
-router.get('/', exampleController.list);
+const indexAction = require('./action');
+/* GET home page. */
+router.get('/', indexAction.index);
 
 module.exports = router;

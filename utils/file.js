@@ -39,13 +39,3 @@ exports.ensureDirExists =  function(dirpath) {
     };
   })
 };
-
-/**
- * 遍历目录及子目录
- * @param {String|File} rootDir 需要被遍历的根目录
- * @param {Function} handle 对应每一个目录下文件的处理函数
- * @param {Integer} depth 遍历的深度，若为空则一直遍历到最深一层子目录
- */
-exports.walk = function(rootDir, handle, depth) {
-
-};
