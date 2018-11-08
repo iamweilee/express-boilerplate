@@ -1,8 +1,6 @@
 'use strict';
 
 const fs = require('fs');
-const _ = require('lodash');
-const path = require('path');
 
 /**
  * 确保路径对应的目录存在, 若不存在则新建目录, 若存在则不做任何操作(支持多级目录)
