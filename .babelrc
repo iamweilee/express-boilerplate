@@ -13,6 +13,7 @@
     [
       "module-resolver",
       {
+        "root": ["./biz"],
         "alias": {
           "db": "./db",
           "logger": "./utils/logger",
