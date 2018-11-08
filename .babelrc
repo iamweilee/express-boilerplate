@@ -18,7 +18,6 @@
           "db": "./db",
           "logger": "./utils/logger",
           "config": "./config",
-          "biz": "./biz",
           "utils": "./utils"
         }
       }
