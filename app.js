@@ -4,7 +4,7 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('./utils/logger');
+const logger = require('logger');
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.locals.app = require('./config').app;
+app.locals.app = require('config').app;
 
 app.disable('x-powered-by');
 

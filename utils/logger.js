@@ -4,7 +4,7 @@ const _ = require('lodash');
 const fileHelper = require('./file');
 // maxLogSize是以byte为单位计算的
 const log4js = require('log4js');
-const loggerCfg = require('../config').logger;
+const loggerCfg = require('config').logger;
 const path = require('path');
 
 var logsDir = `${getLogsDir()}/logs/`;

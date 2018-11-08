@@ -1,6 +1,6 @@
 'use strict';
 
-const logger = require('./logger').getLogger('service');
+const logger = require('logger').getLogger('service');
 
 module.exports = (Model) => {
   return class Service {

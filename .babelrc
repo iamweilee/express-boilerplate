@@ -1,0 +1,26 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "db": "./db",
+          "logger": "./utils/logger",
+          "config": "./config",
+          "biz": "./biz",
+          "utils": "./utils"
+        }
+      }
+    ]
+  ]
+}

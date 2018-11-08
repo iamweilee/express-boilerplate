@@ -1,8 +1,8 @@
 'use strict';
 
 const Sequelize = require('sequelize');
-const cfg = require('./config').db;
-const logger = require('./utils/logger').getLogger('db');
+const cfg = require('config').db;
+const logger = require('logger').getLogger('db');
 
 const sequelize = new Sequelize(
     cfg.database,   // 数据库名

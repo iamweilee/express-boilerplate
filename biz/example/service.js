@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('../../utils/serviceCreator')(require('./model'));
+module.exports = require('utils/serviceCreator')(require('./model'));

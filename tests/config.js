@@ -1,5 +1,5 @@
 'use strict';
 
-const r = require('../config');
+const r = require('config');
 
 console.log(r)
