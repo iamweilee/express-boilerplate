@@ -23,5 +23,5 @@ if (!Model) {
 
 (async function() {
   let result = await Model.drop();
-  console.log(result instanceof Error ? result : `Drop table "${dbName}" success.`);
+  console.log(result instanceof Error ? result : `Drop table "${tableName}" success.`);
 })();
