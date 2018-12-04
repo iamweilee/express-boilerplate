@@ -2,7 +2,7 @@
 
 require('babel-register');
 
-const db = require('./db');
+const db = require('./tmpdb');
 
 const { parsedWithBlank, parsedWithEqual } = require('../utils/args');
 

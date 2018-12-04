@@ -1,5 +1,4 @@
-'use strict';
-
+// 临时数据库
 'use strict';
 
 const Sequelize = require('sequelize');
