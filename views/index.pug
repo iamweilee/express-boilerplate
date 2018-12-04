@@ -1,8 +1,0 @@
-extends layout
-
-block content_layout_body
-  h1= title
-  p Welcome to #{title}
-  input(type='text' jm-value='data.name' jm-change='data.change')
-  div(jm-text='data.name')
-  script(src="/biz/index/index.js")
