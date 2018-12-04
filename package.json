@@ -14,7 +14,13 @@
     "createTable-prod": "cross-env NODE_ENV=prod node scripts/createTable.js",
     "createDB-prod": "cross-env NODE_ENV=prod node scripts/createDB.js",
     "createTable-dev": "node scripts/createTable.js",
-    "createDB-dev": "node scripts/createDB.js"
+    "createDB-dev": "node scripts/createDB.js",
+    "dropTable": "cross-env NODE_ENV=prod node scripts/dropTable.js",
+    "dropDB": "cross-env NODE_ENV=prod node scripts/dropDB.js",
+    "dropTable-prod": "cross-env NODE_ENV=prod node scripts/dropTable.js",
+    "dropDB-prod": "cross-env NODE_ENV=prod node scripts/dropDB.js",
+    "dropTable-dev": "node scripts/dropTable.js",
+    "dropDB-dev": "node scripts/dropDB.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

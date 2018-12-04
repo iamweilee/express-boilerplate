@@ -22,6 +22,6 @@ if (!Model) {
 }
 
 (async function() {
-  let result = await Model.sync({force: false}); // 如果表已存在则返回已存在的表
-  console.log(result instanceof Error ? result : `Create table "${tableName}" success.`);
+  let result = await Model.drop();
+  console.log(result instanceof Error ? result : `Drop table "${dbName}" success.`);
 })();

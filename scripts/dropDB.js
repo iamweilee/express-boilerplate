@@ -15,6 +15,6 @@ if (!dbName) {
 }
 
 (async function() {
-  let result = await db.query(`create database ${dbName} default character set utf8mb4 collate utf8mb4_unicode_ci;`);
-  console.log(result instanceof Error ? result : `Create DB "${dbName}" success.`);
+  let result = await db.query(`drop database ${dbName};`);
+  console.log(result instanceof Error ? result : `Drop DB "${dbName}" success.`);
 })();
