@@ -14,7 +14,8 @@ if (!tableName) {
 }
 
 
-const Model = require(`../biz/${tableName}/model`);
+let Model = require(`../biz/${tableName}/model`);
+Model = Model.default || Model;
 
 if (!Model) {
   console.error(`Model of table "${tableName}" not found.`);

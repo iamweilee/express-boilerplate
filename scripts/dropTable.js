@@ -1,7 +1,8 @@
-// 该模块用于创建表
 'use strict';
 
 require('babel-register');
+
+const db = require('../db');
 
 const { parsedWithBlank, parsedWithEqual } = require('../utils/args');
 
@@ -13,15 +14,7 @@ if (!tableName) {
   return;
 }
 
-
-const Model = require(`../biz/${tableName}/model`);
-
-if (!Model) {
-  console.error(`Model of table "${tableName}" not found.`);
-  return;
-}
-
 (async function() {
-  let result = await Model.drop();
+  let result = await db.query(`drop table ${tableName};`);
   console.log(result instanceof Error ? result : `Drop table "${tableName}" success.`);
 })();

@@ -4,8 +4,10 @@ exports.logger = {
 	level: {
 		access: 'INFO',
 		app: 'INFO',
-    service: 'INFO',
-    db: 'INFO'
+		service: 'INFO',
+		action: 'INFO',
+    db: 'INFO',
+    sms: 'INFO'
 	}
 };
 

@@ -11,14 +11,26 @@ module.exports = (Model) => {
       return this._instance;
     }
   
-    async listByPage({ offset = 0, limit = 10, order_by = 'id', order = 'ASC' }) {
+    async listByPage(options={}) {
+      let offset = options.offset || 0,
+        limit = options.limit || 10,
+        order_by = options.orderby || 'id',
+        order = options.order || 'ASC',
+        where = options.where || {},
+        attributes = options.attributes || {};
+
+        where = filterWhere(where, Model);
+      let condition = {
+        offset,
+        limit,
+        order: [[ order_by, order.toUpperCase() ]],
+        where,
+        attributes
+      };
+
       let result;
       try {
-        result = Model.findAndCountAll({
-          offset: Number(offset),
-          limit: Number(limit),
-          order: [[ order_by, order.toUpperCase() ]],
-        });
+        result = Model.findAndCountAll(condition);
       }
       catch (error) {
         result = error;
@@ -28,10 +40,10 @@ module.exports = (Model) => {
       return result;
     }
   
-    async findById(id) {
+    async findById(id, options={}) {
       let result;
       try {
-        result = await Model.findById(id);
+        result = await Model.findByPk(id, options);
       }
       catch (error) {
         result = error;
@@ -41,10 +53,10 @@ module.exports = (Model) => {
       return result;
     }
   
-    async findAll(where) {
+    async findAll(options={}) {
       let result;
       try {
-        result = await Model.findAll({ where });
+        result = await Model.findAll(options);
       }
       catch (error) {
         result = error;
@@ -54,10 +66,10 @@ module.exports = (Model) => {
       return result;
     }
   
-    async findOne(where) {
+    async findOne(options={}) {
       let result;
       try {
-        result = await Model.findOne({ where });
+        result = await Model.findOne(options);
       }
       catch (error) {
         result = error;
@@ -142,3 +154,15 @@ module.exports = (Model) => {
     }
   };
 };
+
+
+function filterWhere(where, Model) {
+  let attributes = Model.attributes;
+  let newWhere = {};
+  for (let i in where) {
+    if (Reflect.has(attributes, i)) {
+      newWhere[i] = where[i];
+    }
+  }
+  return newWhere;
+}

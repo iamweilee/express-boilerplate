@@ -1,0 +1,15 @@
+###
+GET http://127.0.0.1:8000/company?pageNum=1&pageSize=3
+
+###
+POST http://127.0.0.1:8000/company
+Content-Type: application/json
+
+{
+  "name": "baidu",
+  "startTime": "2018/12/12 00:00:00",
+  "endTime": "2019/12/12 23:59:59"
+}
+
+###
+GET http://127.0.0.1:8000/company/2

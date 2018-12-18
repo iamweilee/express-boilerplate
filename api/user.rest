@@ -1,0 +1,9 @@
+###
+GET http://127.0.0.1:8000/user?pageNum=1&pageSize=2&companyId=2
+
+###
+GET http://127.0.0.1:8000/user?pageNum=1&pageSize=10
+
+###
+GET http://127.0.0.1:8000/user/1
+

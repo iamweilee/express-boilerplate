@@ -5,6 +5,8 @@ exports.logger = {
     access: 'ERROR',
     app: 'ERROR',
     service: 'ERROR',
-    db: 'ERROR'
+    action: 'ERROR',
+    db: 'ERROR',
+    sms: 'ERROR'
 	}
 };

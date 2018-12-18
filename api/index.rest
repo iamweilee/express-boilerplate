@@ -1,0 +1,26 @@
+###
+POST http://127.0.0.1:8000/signup
+Content-Type: application/json
+
+{
+  "mobile": "18816611180",
+  "companyId": 2,
+  "password": "123456",
+  "role": "ADMIN_PLATFORM",
+  "code": "654321"
+}
+
+###
+GET http://127.0.0.1:8000/signout
+
+###
+POST http://127.0.0.1:8000/signin
+Content-Type: application/json
+
+{
+  "accountId": "18816611180",
+  "password": "123456"
+}
+
+###
+GET http://127.0.0.1:8000/session

@@ -1,0 +1,15 @@
+###
+GET http://127.0.0.1:8000/loginhistory?pageNum=1&pageSize=5
+
+###
+POST http://127.0.0.1:8000/loginhistory
+Content-Type: application/json
+
+{
+  "loginName": "18816611180",
+  "password": "123456",
+  "userId": 2
+}
+
+###
+GET http://127.0.0.1:8000/loginhistory/2

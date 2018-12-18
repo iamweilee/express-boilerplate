@@ -13,9 +13,9 @@ exports.logger = {
 };
 
 exports.db = {
-  database: 'db_test',
+  database: 'express_boilerplate',
   username: 'root',
-  password: 'dbpwd',
+  password: 'your-dbpassword',
   dialect: 'mysql',
   host: '127.0.0.1',
   port: 3306,
@@ -37,6 +37,40 @@ exports.db = {
 exports.redis = {
   host: '127.0.0.1',
   port: 6379,
-  // password: 'redispwd',
+  password: 'your-redispassword',
   db: 1
+};
+
+exports.session = {
+  secret: 'session:express-boilerplate.com',
+  name: 'express-boilerplate.sid',
+  cookieOptions: {
+    path: '/',
+    // domain: 'express-boilerplate.com', // 若未正确设置此项可导致每次请求都重新创建新的session
+    secure: false,
+    httpOnly: true,
+    maxAge: 60 * 60 * 24 * 30 * 1000 //ms 一个月
+  }
+};
+
+// 阿里短信服务
+exports.sms = {
+  accessKeyId: 'your-accessKeyId',
+  secretAccessKey: 'your-secretAccessKey',
+  signName: 'your-SmsSignName',
+  templateCode: {
+    signUp: 'SMS_000000001',
+    resetPassword: 'SMS_000000002',
+    newPassword: 'SMS_000000003'
+  },
+  param: {
+    signUp: 'number',
+    resetPassword: 'number',
+    newPassword: 'password'
+  },
+  maxInterval: 15 * 60 * 1000 //ms 15分钟
+  // frequencyControl: { // 一天最多发送 10 次
+  //   interval: 24 * 60 * 60 * 1000,
+  //   times: 10
+  // }
 };

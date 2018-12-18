@@ -1,6 +1,6 @@
 {
   "name": "express-boilerplate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "scripts": {
     "dev": "node ./bin/www",
@@ -23,15 +23,21 @@
     "dropDB-dev": "node scripts/dropDB.js"
   },
   "dependencies": {
+    "@alicloud/sms-sdk": "^1.1.6",
+    "connect-redis": "^3.4.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "http-errors": "~1.6.2",
     "lodash": "^4.17.10",
     "log4js": "^3.0.3",
     "moment": "^2.22.2",
     "mysql2": "^1.5.3",
-    "sequelize": "^4.38.0"
+    "pug": "^2.0.3",
+    "sequelize": "^4.38.0",
+    "shortid": "^2.2.14",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
